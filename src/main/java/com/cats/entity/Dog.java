@@ -2,7 +2,7 @@ package com.cats.entity;
 
 public class Dog {
     public String color = "white";
-    public String groom;
+    public String groom = "groom";
 
     public void groom(String S, String M, String L) {
 

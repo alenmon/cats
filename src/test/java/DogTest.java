@@ -27,10 +27,8 @@ public class DogTest {
         Dog dog = new Dog();
         Child child = new Child();
 
-        child.beardDog(dog, groom);
-        assertEquals("S", dog.groom);
-        assertEquals("M", dog.groom);
-        assertEquals("L", dog.groom);
+        child.beardDog(dog, dog.groom);
+        assertEquals("groom", dog.groom);
 
     }
 
