@@ -1,11 +1,13 @@
 package com.cats.entity;
 
-import static java.lang.System.out;
-
 public class Cat {
-    public String color;
+    private String defaultColor = "black";
+    public String color = defaultColor;
 
-    public static void meow() {
-        out.println("meow");
+    public String meow() {
+        return "meow";
+    }
+    public static String staticMeow() {
+        return "meow";
     }
 }
