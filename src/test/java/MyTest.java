@@ -4,7 +4,6 @@ import static com.cats.CatsCounter.calculateCats;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
 public class MyTest {
     @Test
     public void calculateCatsTest() {
@@ -24,7 +23,7 @@ public class MyTest {
     @Test
     public void calculateCatsTest4() {
         assertThrows(IllegalArgumentException.class, () -> {
-            calculateCats(1001, 4);
+            calculateCats(1000, 1001);
         });
     }
 }

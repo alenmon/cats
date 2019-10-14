@@ -29,8 +29,6 @@ public class DogTest {
 
         child.beardDog(dog, dog.groom);
         assertEquals("groom", dog.groom);
-
     }
-
 
 }
