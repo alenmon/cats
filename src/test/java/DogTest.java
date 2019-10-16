@@ -3,6 +3,7 @@ import com.cats.entity.Dog;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class DogTest {
     @Test
@@ -22,13 +23,55 @@ public class DogTest {
 
     }
 
+    enum Wool {
+        S, M, L
+    }
+
     @Test
-    public void childTestGroom() {
+    public void childTestWool() {
         Dog dog = new Dog();
+        assertEquals("L", dog.wool);
+
         Child child = new Child();
 
-        child.beardDog(dog, dog.groom);
-        assertEquals("groom", dog.groom);
+        child.beardDog(dog, "M");
+        assertEquals("M", dog.wool);
+
+        child.beardDog(dog, "S");
+        assertEquals("S", dog.wool);
+    }
+
+    @Test
+    public void beardDogTest() {
+        Dog dog = new Dog();
+        Child child = new Child();
+        dog.wool = "M";
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            child.beardDog(dog, "L");
+        });
+    }
+
+    @Test
+    public void beardDogTest2() {
+        Dog dog = new Dog();
+        Child child = new Child();
+        dog.wool = "S";
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            child.beardDog(dog, "M");
+        });
+    }
+
+    @Test
+    public void beardDogTest3() {
+        Dog dog = new Dog();
+        Child child = new Child();
+        dog.wool = "S";
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            child.beardDog(dog, "L");
+        });
     }
 
 }

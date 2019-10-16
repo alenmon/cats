@@ -9,7 +9,15 @@ public class Child {
         dog.color = color;
     }
 
-    public void beardDog(Dog dog, String groom) {
-        dog.groom = groom;
+    public void beardDog(Dog dog, String wool) {
+
+        if (dog.wool.equals("M") && wool.equals("L") || dog.wool.equals("S") && wool.equals("M") || dog.wool.equals("S") && wool.equals("L")) {
+            throw new IllegalArgumentException("Mistake");
+        }
+
+        dog.wool = wool;
+
     }
+    // у собаки шерсть М и кто-то передает шерсть L
+    // dog.wool == М && wool == L
 }

@@ -23,7 +23,7 @@ public class MyTest {
     @Test
     public void calculateCatsTest4() {
         assertThrows(IllegalArgumentException.class, () -> {
-            calculateCats(1000, 1001);
+            calculateCats(1001, 1001);
         });
     }
 }
