@@ -15,12 +15,12 @@ public class DogTest {
     @Test
     public void childTestColor() {
         Dog dog = new Dog();
-        assertEquals("white", dog.color);
+        assertEquals("white", dog.getColor());
 
         Child child = new Child();
 
         child.paintDog(dog, "purple");
-        assertEquals("purple", dog.color);
+        assertEquals("purple", dog.getColor());
 
     }
 

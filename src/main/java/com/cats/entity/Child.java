@@ -8,7 +8,7 @@ public class Child {
     }
 
     public void paintDog(Dog dog, String color) {
-        dog.color = color;
+        dog.setColor(color);
     }
 
     public void beardDog(Dog dog, Wool wool) {
