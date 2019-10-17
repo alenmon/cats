@@ -1,5 +1,7 @@
 package com.cats.entity;
 
+import static com.cats.entity.Wool.*;
+
 public class Child {
     public void paintCat(Cat cat, String color) {
         cat.color = color;
@@ -9,15 +11,17 @@ public class Child {
         dog.color = color;
     }
 
-    public void beardDog(Dog dog, String wool) {
+    public void beardDog(Dog dog, Wool wool) {
 
-        if (dog.wool.equals("M") && wool.equals("L") || dog.wool.equals("S") && wool.equals("M") || dog.wool.equals("S") && wool.equals("L")) {
+        if (dog.wool.equals(M) && wool.equals(L) || dog.wool.equals(S) && wool.equals(M) || dog.wool.equals(S) && wool.equals(L)) {
             throw new IllegalArgumentException("Mistake");
         }
 
         dog.wool = wool;
 
     }
+
+
     // у собаки шерсть М и кто-то передает шерсть L
     // dog.wool == М && wool == L
 }
