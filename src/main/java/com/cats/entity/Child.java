@@ -13,14 +13,13 @@ public class Child {
 
     public void beardDog(Dog dog, Wool wool) {
 
-        if (dog.wool.equals(M) && wool.equals(L) || dog.wool.equals(S) && wool.equals(M) || dog.wool.equals(S) && wool.equals(L)) {
+        if (dog.getWool().equals(M) && wool.equals(L) || dog.getWool().equals(S) && wool.equals(M) || dog.getWool().equals(S) && wool.equals(L)) {
             throw new IllegalArgumentException("Mistake");
         }
 
-        dog.wool = wool;
+        dog.setWool(wool);
 
     }
-
 
     // у собаки шерсть М и кто-то передает шерсть L
     // dog.wool == М && wool == L
