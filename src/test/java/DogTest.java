@@ -1,6 +1,5 @@
 import com.cats.entity.Child;
 import com.cats.entity.Dog;
-import com.cats.entity.Wool;
 import org.junit.jupiter.api.Test;
 
 import static com.cats.entity.Wool.*;
@@ -32,10 +31,10 @@ public class DogTest {
 
         Child child = new Child();
 
-        child.beardDog(dog, M);
+        child.setWool(dog, M);
         assertEquals(M, dog.getWool());
 
-        child.beardDog(dog, S);
+        child.setWool(dog, S);
         assertEquals(S, dog.getWool());
     }
 
@@ -46,7 +45,7 @@ public class DogTest {
         dog.setWool(M);
 
         assertThrows(IllegalArgumentException.class, () -> {
-            child.beardDog(dog, L);
+            child.setWool(dog, L);
         });
     }
 
@@ -57,7 +56,7 @@ public class DogTest {
         dog.setWool(S);
 
         assertThrows(IllegalArgumentException.class, () -> {
-            child.beardDog(dog, M);
+            child.setWool(dog, M);
         });
     }
 
@@ -68,7 +67,7 @@ public class DogTest {
         dog.setWool(S);
 
         assertThrows(IllegalArgumentException.class, () -> {
-            child.beardDog(dog, L);
+            child.setWool(dog, L);
         });
     }
 }

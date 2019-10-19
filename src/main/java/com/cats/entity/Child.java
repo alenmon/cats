@@ -11,7 +11,7 @@ public class Child {
         dog.setColor(color);
     }
 
-    public void beardDog(Dog dog, Wool wool) {
+    public void setWool(Dog dog, Wool wool) {
 
         if (dog.getWool().equals(M) && wool.equals(L) || dog.getWool().equals(S) && wool.equals(M) || dog.getWool().equals(S) && wool.equals(L)) {
             throw new IllegalArgumentException("Mistake");
