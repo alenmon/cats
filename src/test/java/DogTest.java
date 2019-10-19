@@ -1,5 +1,6 @@
 import com.cats.entity.Child;
 import com.cats.entity.Dog;
+import com.cats.entity.Husky;
 import org.junit.jupiter.api.Test;
 
 import static com.cats.entity.Wool.*;
@@ -9,12 +10,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class DogTest {
     @Test
     public void woofTest() {
-        assertEquals("woof", new Dog().woof());
+        assertEquals("Husky barks", new Husky().dogBark());
     }
 
     @Test
     public void childTestColor() {
-        Dog dog = new Dog();
+        Dog dog = new Husky();
         assertEquals("white", dog.getColor());
 
         Child child = new Child();
@@ -26,7 +27,7 @@ public class DogTest {
 
     @Test
     public void childTestWool() {
-        Dog dog = new Dog();
+        Dog dog = new Husky();
         assertEquals(L, dog.getWool());
 
         Child child = new Child();
@@ -40,7 +41,7 @@ public class DogTest {
 
     @Test
     public void beardDogTest() {
-        Dog dog = new Dog();
+        Dog dog = new Husky();
         Child child = new Child();
         dog.setWool(M);
 
@@ -51,7 +52,7 @@ public class DogTest {
 
     @Test
     public void beardDogTest2() {
-        Dog dog = new Dog();
+        Dog dog = new Husky();
         Child child = new Child();
         dog.setWool(S);
 
@@ -62,7 +63,7 @@ public class DogTest {
 
     @Test
     public void beardDogTest3() {
-        Dog dog = new Dog();
+        Dog dog = new Husky();
         Child child = new Child();
         dog.setWool(S);
 

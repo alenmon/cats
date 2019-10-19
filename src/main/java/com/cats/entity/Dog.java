@@ -1,8 +1,9 @@
 package com.cats.entity;
 
-import static com.cats.entity.Wool.*;
+import static com.cats.entity.Wool.L;
 
-public class Dog {
+public abstract class Dog {
+
     private String color = "white";
     private Wool wool = L;
 
@@ -22,7 +23,8 @@ public class Dog {
         wool = newWool;
     }
 
-    public String woof() {
-        return "woof";
+    public String dogBark() {
+        return "Dog barks";
     }
+
 }
